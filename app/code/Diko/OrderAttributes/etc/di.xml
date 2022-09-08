@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Diko\OrderAttributes\Api\Data\OrderAttributesInterface"
+                type="Diko\OrderAttributes\Model\OrderAttributes"/>
+    <preference for="Diko\OrderAttributes\Api\OrderAttributesRepositoryInterface"
+                type="Diko\OrderAttributes\Model\OrderAttributesRepository"/>
+
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="OrderExtensionAttributeOperations" type="Diko\OrderAttributes\Plugin\OrderRepositoryPlugin"/>
+    </type>
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="DikoProductExtensionAttributeOperations" type="Diko\OrderAttributes\Plugin\ProductRepositoryPlugin"/>
+    </type>
+</config>
