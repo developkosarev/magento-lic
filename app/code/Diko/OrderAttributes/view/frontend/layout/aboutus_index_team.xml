@@ -9,5 +9,6 @@
             <block name="about.us.team" template="Diko_OrderAttributes::about_us/team.phtml">
             </block>
         </referenceContainer>
+        <move element="about.us.team" destination="main" before="about.us.header"/>
     </body>
 </page>
