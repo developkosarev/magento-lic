@@ -1,16 +1,32 @@
 <?xml version="1.0"?>
-<!--
-/**
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
--->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceBlock name="data">
-            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/create/info.phtml" after="comment">
+        <!--
+        <referenceContainer name="js">
+            <block class="Magento\Backend\Block\Template" template="Diko_OrderAttributes::order/create/view.phtml" name="create1"/>
+        </referenceContainer>
+        -->
+
+        <referenceContainer name="content">
+            <block class="Magento\Backend\Block\Template" template="Diko_OrderAttributes::order/create/view2.phtml" name="create2"/>
+        </referenceContainer>
+
+        <!--
+        <referenceBlock name="order_content">
+            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/create/view1.phtml">
             </block>
         </referenceBlock>
+
+        <referenceBlock name="shipping_address">
+            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/create/view2.phtml">
+            </block>
+        </referenceBlock>
+
+        <referenceBlock name="billing_method">
+            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/create/view2.phtml">
+            </block>
+        </referenceBlock>
+        -->
     </body>
 </page>
