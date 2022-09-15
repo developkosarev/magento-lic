@@ -4,11 +4,19 @@
     <body>
         <!-- add custom block -->
         <referenceContainer name="order_additional_info">
-            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/view/info.phtml">
+            <block name="diko_order_attributes" template="Diko_OrderAttributes::order/view/additional-info.phtml">
                 <arguments>
                     <argument name="view_model" xsi:type="object">Diko\OrderAttributes\ViewModel\OrderAttributes</argument>
                 </arguments>
             </block>
         </referenceContainer>
+
+        <!-- add custom view -->
+        <referenceBlock class="Magento\Sales\Block\Adminhtml\Order\View\Info" name="order_info" template="Diko_OrderAttributes::order/view/custom-info.phtml">
+            <arguments>
+                <argument name="view_model" xsi:type="object">Diko\OrderAttributes\ViewModel\OrderAttributes</argument>
+            </arguments>
+        </referenceBlock>
+
     </body>
 </page>
