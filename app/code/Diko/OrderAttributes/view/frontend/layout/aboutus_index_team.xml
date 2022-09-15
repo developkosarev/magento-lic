@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<page layout="1column"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block name="about.us.header" template="Diko_OrderAttributes::about_us/header.phtml">
+            </block>
+            <block name="about.us.team" template="Diko_OrderAttributes::about_us/team.phtml">
+            </block>
+        </referenceContainer>
+        <move element="about.us.team" destination="main" before="about.us.header"/>
+    </body>
+</page>

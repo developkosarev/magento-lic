@@ -1,0 +1,28 @@
+<?php
+/** @var Magento\Framework\Escaper $escaper */
+
+/** @var Magento\Framework\View\Element\Template $block */
+$viewModel = $block->getViewModel();
+
+/** @var Diko\OrderAttributes\ViewModel\OrderAttributes $viewModel */
+$comment = $viewModel->getComment();
+?>
+
+<!-- diko_order_attributes -->
+<section class="admin__page-section order-attributes">
+    <div class="admin__page-section-title">
+        <span class="title"><?= $escaper->escapeHtml(__('Order attributes')) ?></span>
+    </div>
+    <div class="admin__page-section-content">
+        <div class="admin__page-section-item order-information">
+            <div class="admin__page-section-item-content">
+                <table class="admin__table-secondary order-information-table">
+                    <tr>
+                        <th><?= $escaper->escapeHtml(__('Customer comment')) ?></th>
+                        <td><?= $escaper->escapeHtml($comment) ?></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
