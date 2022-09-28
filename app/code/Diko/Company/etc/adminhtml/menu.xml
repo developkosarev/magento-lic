@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Diko_Company::Diko" title="Diko" translate="title" module="Diko_Company" resource="Diko_Company::diko" parent="Magento_Backend::content" sortOrder="10" />
+        <add id="Diko_Company::Diko" title="Diko" translate="title" module="Diko_Company" resource="Diko_Company::diko" parent="Magento_Backend::content" sortOrder="30" />
         <add id="Diko_Company::Company" title="Company" translate="title" module="Diko_Company" resource="Diko_Company::company" parent="Diko_Company::Diko" action="diko/company"/>
     </menu>
 </config>
