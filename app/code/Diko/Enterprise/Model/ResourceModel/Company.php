@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Diko\Company\Model\ResourceModel;
+namespace Diko\Enterprise\Model\ResourceModel;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
@@ -11,7 +11,7 @@ class Company extends AbstractDb
     const MAIN_TABLE = 'diko_company';
 
     /** @var string */
-    const ID_FIELD_NAME = 'entity_id';
+    const ID_FIELD_NAME = 'id';
 
     protected function _construct()
     {

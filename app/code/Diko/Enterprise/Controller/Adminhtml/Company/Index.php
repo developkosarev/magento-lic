@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Diko\Company\Controller\Adminhtml\Company;
+namespace Diko\Enterprise\Controller\Adminhtml\Company;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -27,7 +27,7 @@ class Index extends Action implements HttpGetActionInterface
     public function execute(): Page
     {
         $page = $this->pageFactory->create();
-        $page->setActiveMenu('Diko_Company::Company');
+        $page->setActiveMenu('Diko_Enterprise::Company');
 
         return $page;
     }

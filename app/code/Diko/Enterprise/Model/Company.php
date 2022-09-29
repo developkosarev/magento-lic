@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Diko\Company\Model;
+namespace Diko\Enterprise\Model;
 
 use Magento\Framework\Model\AbstractModel;
 
