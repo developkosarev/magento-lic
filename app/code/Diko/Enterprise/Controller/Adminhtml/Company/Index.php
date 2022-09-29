@@ -10,7 +10,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Index extends Action implements HttpGetActionInterface
 {
-    const ADMIN_RESOURCE = 'Diko_Company::company';
+    const ADMIN_RESOURCE = 'Diko_Enterprise::company';
 
     /** @var PageFactory */
     protected $pageFactory;
@@ -27,7 +27,8 @@ class Index extends Action implements HttpGetActionInterface
     public function execute(): Page
     {
         $page = $this->pageFactory->create();
-        $page->setActiveMenu('Diko_Enterprise::Company');
+        $page->setActiveMenu('Diko_Enterprise::company');
+        $page->getConfig()->getTitle()->prepend(__('Company'));
 
         return $page;
     }

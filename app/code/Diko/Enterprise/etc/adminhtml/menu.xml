@@ -8,7 +8,7 @@
              resource="Diko_Enterprise::enterprise"
              parent="Magento_Backend::content"
              sortOrder="30" />
-        <add id="Diko_Enterprise::Company"
+        <add id="Diko_Enterprise::company"
              title="Company"
              translate="title"
              module="Diko_Enterprise"
