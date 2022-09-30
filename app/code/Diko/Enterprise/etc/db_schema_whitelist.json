@@ -11,6 +11,9 @@
         },
         "constraint": {
             "PRIMARY": true
+        },
+        "index": {
+            "DIKO_COMPANY_TITLE_ADDRESS": true
         }
     }
 }

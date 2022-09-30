@@ -12,5 +12,9 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="id"/>
         </constraint>
+        <index referenceId="DIKO_COMPANY_TITLE_ADDRESS" indexType="fulltext">
+            <column name="title"/>
+            <column name="address"/>
+        </index>
     </table>
 </schema>

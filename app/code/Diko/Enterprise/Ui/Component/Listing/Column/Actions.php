@@ -50,6 +50,12 @@ class Actions extends Column
                     ]),
                     'label' => __('Edit'),
                 ],
+                'delete' => [
+                    'href' => $this->urlBuilder->getUrl('enterprise/company/delete', [
+                        'id' => $item['id'],
+                    ]),
+                    'label' => __('Delete'),
+                ],
             ];
         }
 
