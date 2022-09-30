@@ -75,3 +75,6 @@ atlassian*
 
 
 /auth.json
+/app/code/Macademy
+/app/code/MageMastery
+/app/design/frontend/MageMastery

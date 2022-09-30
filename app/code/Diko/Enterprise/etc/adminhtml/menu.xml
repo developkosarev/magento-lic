@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Diko_Enterprise::enterprise"
+             title="Enterprise"
+             translate="title"
+             module="Diko_Enterprise"
+             resource="Diko_Enterprise::enterprise"
+             parent="Magento_Backend::content"
+             sortOrder="30" />
+        <add id="Diko_Enterprise::company"
+             title="Company"
+             translate="title"
+             module="Diko_Enterprise"
+             resource="Diko_Enterprise::company"
+             parent="Diko_Enterprise::enterprise"
+             action="enterprise/company"/>
+    </menu>
+</config>

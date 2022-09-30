@@ -1,0 +1,19 @@
+{
+    "diko_company": {
+        "column": {
+            "id": true,
+            "title": true,
+            "prefix": true,
+            "phone": true,
+            "address": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        },
+        "index": {
+            "DIKO_COMPANY_TITLE_ADDRESS": true
+        }
+    }
+}

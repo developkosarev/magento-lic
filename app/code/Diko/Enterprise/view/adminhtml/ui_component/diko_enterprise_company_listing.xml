@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">diko_enterprise_company_listing.diko_enterprise_company_listing_data_source</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="add" xsi:type="array">
+                <item name="name" xsi:type="string">add</item>
+                <item name="label" xsi:type="string" translate="true">Add New Company</item>
+                <item name="url" xsi:type="string">enterprise/company/new</item>
+                <item name="class" xsi:type="string">primary</item>
+            </item>
+        </item>
+    </argument>
+    <settings>
+        <deps>
+            <dep>diko_enterprise_company_listing.diko_enterprise_company_listing_data_source</dep>
+        </deps>
+        <spinner>diko_enterprise_company_columns</spinner>
+    </settings>
+    <dataSource name="diko_enterprise_company_listing_data_source" component="Magento_Ui/js/grid/provider">
+        <settings>
+            <updateUrl path="mui/index/render"/>
+            <storageConfig>
+                <param name="indexField" xsi:type="string">id</param>
+            </storageConfig>
+        </settings>
+        <aclResource>Diko_Enterprise::company</aclResource>
+        <dataProvider name="diko_enterprise_company_listing_data_source" class="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <listingToolbar name="listing_top">
+        <settings>
+            <sticky>true</sticky>
+        </settings>
+        <paging name="listing_paging"/>
+        <columnsControls name="columns_controls"/>
+        <bookmark name="bookmarks"/>
+        <filters name="listing_filters"/>
+        <filterSearch name="fulltext"/>
+    </listingToolbar>
+    <columns name="diko_enterprise_company_columns">
+        <settings>
+            <childDefaults>
+                <param name="fieldAction" xsi:type="array">
+                    <item name="provider" xsi:type="string">diko_enterprise_company_listing.diko_enterprise_company_listing.diko_enterprise_company_columns.actions</item>
+                    <item name="target" xsi:type="string">applyAction</item>
+                    <item name="params" xsi:type="array">
+                        <item name="0" xsi:type="string">edit</item>
+                        <item name="1" xsi:type="string">${ $.$data.rowIndex }</item>
+                    </item>
+                </param>
+            </childDefaults>
+        </settings>
+        <column name="id">
+            <settings>
+                <label translate="true">ID</label>
+            </settings>
+        </column>
+        <column name="title">
+            <settings>
+                <label translate="true">Title</label>
+                <filter>text</filter>
+            </settings>
+        </column>
+        <column name="prefix">
+            <settings>
+                <label translate="true">Prefix</label>
+            </settings>
+        </column>
+        <column name="phone">
+            <settings>
+                <label translate="true">Phone</label>
+            </settings>
+        </column>
+        <column name="address">
+            <settings>
+                <label translate="true">Address</label>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <label translate="true">Created at</label>
+            </settings>
+        </column>
+        <column name="updated_at">
+            <settings>
+                <label translate="true">Updated at</label>
+            </settings>
+        </column>
+        <actionsColumn name="actions" class="Diko\Enterprise\Ui\Component\Listing\Column\Actions">
+            <settings>
+                <label translate="true">Actions</label>
+            </settings>
+        </actionsColumn>
+    </columns>
+</listing>
