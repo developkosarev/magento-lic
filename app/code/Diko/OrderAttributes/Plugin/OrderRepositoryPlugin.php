@@ -24,11 +24,39 @@ class OrderRepositoryPlugin
     {
         $orderAttribute = $this->repository->getByOrderId((int) $result->getEntityId());
 
-        $extensionAttributes = $result->getExtensionAttributes();
-        //$extensionAttributes->setCommentData('test1');
-        $extensionAttributes->setCommentData($orderAttribute->getComment());
+        $result
+            ->getExtensionAttributes()
+            ->setCommentData($orderAttribute->getComment() ?? '');
 
-        $result->setExtensionAttributes($extensionAttributes);
+        return $result;
+
+        //$extensionAttributes = $result->getExtensionAttributes();
+        //$extensionAttributes->setCommentData($orderAttribute->getComment());
+        //$extensionAttributes->setCommentData('test1');
+
+        //$result->setExtensionAttributes($extensionAttributes);
+
+        //return $result;
+    }
+
+    public function afterSave(
+        OrderRepositoryInterface $subject,
+        OrderInterface $result,
+        OrderInterface $entity
+    ) {
+        $extensionAttributes = $entity->getExtensionAttributes();
+        $commentData = $extensionAttributes->getCommentData();
+        $commentData = 'DUMMY COMMENT';
+
+        $orderAttribute = $this->repository->getByOrderId((int) $result->getEntityId());
+        $orderAttribute
+            ->setOrderId($result->getEntityId())
+            ->setComment($commentData);
+        $this->repository->save($orderAttribute);
+
+        $resultAttributes = $result->getExtensionAttributes();
+        $resultAttributes->setCommentData($commentData);
+        $result->setExtensionAttributes($resultAttributes);
 
         return $result;
     }

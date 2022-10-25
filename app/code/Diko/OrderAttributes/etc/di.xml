@@ -12,6 +12,10 @@
         <plugin name="DikoOrderExtensionAttributeOperations" type="Diko\OrderAttributes\Plugin\OrderRepositoryPlugin"/>
     </type>
 
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="DikoSaveCommentInQuote" type="Diko\OrderAttributes\Plugin\ShippingInformationManagementPlugin" sortOrder="1"/>
+    </type>
+
     <!-- Product -->
     <type name="Magento\Catalog\Api\ProductRepositoryInterface">
         <plugin name="DikoProductExtensionAttributeOperations" type="Diko\OrderAttributes\Plugin\ProductRepositoryPlugin"/>
