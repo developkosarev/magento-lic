@@ -19,13 +19,23 @@ class OrderAttributes extends AbstractModel implements OrderAttributesInterface
         $this->_init(ResourceModel\OrderAttributes::class);
     }
 
+    public function getOrderId()
+    {
+        return $this->getData(self::ORDER_ID);
+    }
+
+    public function setOrderId($value): self
+    {
+        return $this->setData(self::ORDER_ID, $value);
+    }
+
     public function getComment()
     {
         return $this->getData(self::COMMENT);
     }
 
-    public function setComment($comment)
+    public function setComment($value): self
     {
-        return $this->setData(self::COMMENT, $comment);
+        return $this->setData(self::COMMENT, $value);
     }
 }
