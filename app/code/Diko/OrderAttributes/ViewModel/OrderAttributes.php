@@ -19,7 +19,7 @@ class OrderAttributes implements ArgumentInterface
         $this->request = $request;
     }
 
-    public function getComment(): string
+    public function getComment(): ?string
     {
         $orderId = (int) $this->request->getParam('order_id');
         $orderAttribute = $this->repository->getByOrderId($orderId);

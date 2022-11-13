@@ -16,13 +16,26 @@ interface OrderAttributesInterface
     const COMMENT = 'comment';
 
     /**
+     * Get order id
+     * @return string
+     */
+    public function getOrderId();
+
+    /**
+     * @param string $value
+     * @return $this
+     */
+    public function setOrderId($value);
+
+    /**
+     * Get comment
      * @return string
      */
     public function getComment();
 
     /**
-     * @param string $comment
+     * @param string $value
      * @return $this
      */
-    public function setComment($comment);
+    public function setComment($value);
 }
