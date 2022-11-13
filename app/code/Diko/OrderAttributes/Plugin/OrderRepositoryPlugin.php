@@ -29,14 +29,6 @@ class OrderRepositoryPlugin
             ->setCommentData($orderAttribute->getComment() ?? '');
 
         return $result;
-
-        //$extensionAttributes = $result->getExtensionAttributes();
-        //$extensionAttributes->setCommentData($orderAttribute->getComment());
-        //$extensionAttributes->setCommentData('test1');
-
-        //$result->setExtensionAttributes($extensionAttributes);
-
-        //return $result;
     }
 
     public function afterSave(
@@ -46,7 +38,6 @@ class OrderRepositoryPlugin
     ) {
         $extensionAttributes = $entity->getExtensionAttributes();
         $commentData = $extensionAttributes->getCommentData();
-        $commentData = 'DUMMY COMMENT';
 
         $orderAttribute = $this->repository->getByOrderId((int) $result->getEntityId());
         $orderAttribute

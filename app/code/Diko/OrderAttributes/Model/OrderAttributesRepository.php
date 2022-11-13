@@ -13,6 +13,11 @@ use Magento\Framework\Exception\NoSuchEntityException;
 class OrderAttributesRepository implements OrderAttributesRepositoryInterface
 {
     /**
+     * @var OrderAttributesInterface[]
+     */
+    protected $orderAttributesByOrderId = [];
+
+    /**
      * @var OrderAttributesResourceModel $orderAttributesResourceModel
      */
     private OrderAttributesResourceModel $orderAttributesResourceModel;
@@ -32,10 +37,14 @@ class OrderAttributesRepository implements OrderAttributesRepositoryInterface
 
     public function getByOrderId(int $orderId): OrderAttributesInterface
     {
-        $orderAttributes = $this->orderAttributesFactory->create();
-        $this->orderAttributesResourceModel->load($orderAttributes, $orderId, OrderAttributesInterface::ORDER_ID);
+        if (!isset($this->orderAttributesByOrderId[$orderId])) {
+            $orderAttributes = $this->orderAttributesFactory->create();
+            $this->orderAttributesResourceModel->load($orderAttributes, $orderId, OrderAttributesInterface::ORDER_ID);
 
-        return $orderAttributes;
+            $this->orderAttributesByOrderId[$orderId] = $orderAttributes;
+        }
+
+        return $this->orderAttributesByOrderId[$orderId];
     }
 
     /**

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <!-- 1 -->
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">diko_enterprise_company_form.diko_enterprise_company_data_source</item>
+        </item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <!-- 2 -->
+    <settings>
+        <buttons>
+            <button name="back" class="Diko\Enterprise\Block\Adminhtml\Company\Edit\Button\Back"/>
+            <button name="save" class="Diko\Enterprise\Block\Adminhtml\Company\Edit\Button\Save"/>
+        </buttons>
+        <namespace>diko_enterprise_company_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>diko_enterprise_company_form.diko_enterprise_company_data_source</dep>
+        </deps>
+    </settings>
+    <!-- 3 -->
+    <dataSource name="diko_enterprise_company_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+            </item>
+        </argument>
+        <settings>
+            <submitUrl path="*/*/save"/>
+        </settings>
+        <dataProvider class="Diko\Enterprise\Ui\DataProvider\Company" name="diko_enterprise_company_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <!-- 4 -->
+    <fieldset name="diko_enterprise_company_fieldset">
+        <settings>
+            <label/>
+        </settings>
+        <field name="id" formElement="hidden"/>
+        <field name="title" formElement="input">
+            <settings>
+                <label translate="true">Title</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="prefix" formElement="input">
+            <settings>
+                <label translate="true">Prefix</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="phone" formElement="input">
+            <settings>
+                <label translate="true">Phone</label>
+            </settings>
+        </field>
+        <field name="address" formElement="input">
+            <settings>
+                <label translate="true">Address</label>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+    </fieldset>
+</form>
