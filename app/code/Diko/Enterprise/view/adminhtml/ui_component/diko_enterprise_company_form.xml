@@ -37,7 +37,7 @@
         </dataProvider>
     </dataSource>
     <!-- 4 -->
-    <fieldset name="diko_enterprise_company_fieldset">
+    <fieldset name="general">
         <settings>
             <label/>
         </settings>
@@ -50,6 +50,12 @@
                 </validation>
             </settings>
         </field>
+    </fieldset>
+    <fieldset name="content" sortOrder="10">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Content</label>
+        </settings>
         <field name="prefix" formElement="input">
             <settings>
                 <label translate="true">Prefix</label>
