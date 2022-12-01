@@ -72,10 +72,3 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
-
-
-/auth.json
-/app/code/Macademy
-/app/code/MageMastery
-/app/code/Mirasvit
-/app/design/frontend/MageMastery

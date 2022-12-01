@@ -19,9 +19,9 @@
     },
     "version": "2.4.4",
     "require": {
-        "magento/product-community-edition": "2.4.4",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
-        "magento/composer-root-update-plugin": "~2.0"
+        "magento/composer-root-update-plugin": "~2.0",
+        "magento/product-community-edition": "2.4.5"
     },
     "replace": {
         "magento/module-dhl": "*",
@@ -30,7 +30,6 @@
         "magento/module-multishipping": "*",
         "magento/module-ups": "*",
         "magento/module-usps": "*",
-
         "magento/module-advanced-pricing-import-export": "*",
         "magento/module-bundle-import-export": "*",
         "magento/module-catalog-import-export": "*",
@@ -39,7 +38,6 @@
         "magento/module-downloadable-import-export": "*",
         "magento/module-grouped-import-export": "*",
         "magento/module-tax-import-export": "*",
-
         "magento/module-inventory": "*",
         "magento/module-inventory-admin-ui": "*",
         "magento/module-inventory-advanced-checkout": "*",
@@ -89,7 +87,6 @@
         "magento/module-inventory-in-store-pickup-shipping-api": "*",
         "magento/module-inventory-in-store-pickup-webapi-extension": "*",
         "magento/module-inventory-indexer": "*",
-
         "magento/module-inventory-low-quantity-notification": "*",
         "magento/module-inventory-low-quantity-notification-admin-ui": "*",
         "magento/module-inventory-low-quantity-notification-api": "*",
@@ -100,7 +97,6 @@
         "magento/module-inventory-reservation-cli": "*",
         "magento/module-inventory-reservations": "*",
         "magento/module-inventory-reservations-api": "*",
-
         "magento/module-inventory-sales": "*",
         "magento/module-inventory-sales-admin-ui": "*",
         "magento/module-inventory-sales-api": "*",
@@ -138,15 +134,15 @@
     },
     "require-dev": {
         "allure-framework/allure-phpunit": "~1.5.0",
-        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-        "friendsofphp/php-cs-fixer": "~3.3.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+        "friendsofphp/php-cs-fixer": "~3.4.0",
         "lusitanian/oauth": "~0.8.10",
         "magento/magento-coding-standard": "*",
         "magento/magento2-functional-testing-framework": "^3.7",
         "pdepend/pdepend": "~2.10.0",
-        "phpmd/phpmd": "^2.9.1",
-        "phpstan/phpstan": "~1.2.0",
-        "phpunit/phpunit": "~9.5.0",
+        "phpmd/phpmd": "^2.12.0",
+        "phpstan/phpstan": "^1.6.8",
+        "phpunit/phpunit": "~9.5.20",
         "sebastian/phpcpd": "^6.0.3",
         "squizlabs/php_codesniffer": "~3.6.0",
         "symfony/finder": "^5.2",
