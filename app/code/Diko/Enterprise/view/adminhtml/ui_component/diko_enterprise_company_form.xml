@@ -37,7 +37,7 @@
         </dataProvider>
     </dataSource>
     <!-- 4 -->
-    <fieldset name="diko_enterprise_company_fieldset">
+    <fieldset name="general">
         <settings>
             <label/>
         </settings>
@@ -50,6 +50,12 @@
                 </validation>
             </settings>
         </field>
+    </fieldset>
+    <fieldset name="content" sortOrder="10">
+        <settings>
+            <collapsible>true</collapsible>
+            <label translate="true">Content</label>
+        </settings>
         <field name="prefix" formElement="input">
             <settings>
                 <label translate="true">Prefix</label>
@@ -70,6 +76,37 @@
                     <rule name="required-entry" xsi:type="boolean">true</rule>
                 </validation>
             </settings>
+        </field>
+        <field name="type" formElement="select">
+            <settings>
+                <!-- <dataType>text</dataType> -->
+                <label translate="true">Type</label>
+                <!-- <dataScope>select_example</dataScope> -->
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">1</item>
+                                <item name="label" xsi:type="string">GmbH</item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="value" xsi:type="string">2</item>
+                                <item name="label" xsi:type="string">AG</item>
+                            </option>
+                            <option name="3" xsi:type="array">
+                                <item name="value" xsi:type="string">3</item>
+                                <item name="label" xsi:type="string">UG</item>
+                            </option>
+                        </options>
+                        <caption translate="true">-- Please Select --</caption>
+                    </settings>
+                </select>
+            </formElements>
         </field>
     </fieldset>
 </form>

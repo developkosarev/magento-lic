@@ -50,6 +50,10 @@ class Save extends Action implements HttpPostActionInterface
         $redirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
 
         if ($isExistingPost) {
+            //echo "<pre>";
+            //print_r($post);
+            //die("dead");
+
             try {
                 $this->companyResource->load($company, $post->id);
                 if (!$company->getData('id')) {
