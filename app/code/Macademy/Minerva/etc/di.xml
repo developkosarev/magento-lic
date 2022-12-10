@@ -13,4 +13,9 @@
             </argument>
         </arguments>
     </type>
+
+    <!-- Address -->
+    <type name="Magento\Customer\Api\AddressRepositoryInterface">
+        <plugin name="macademy_minerva_address_repository_interface" type="Macademy\Minerva\Plugin\AddressRepositoryPlugin"/>
+    </type>
 </config>

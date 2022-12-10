@@ -23,6 +23,8 @@ class ViewTest extends \Magento\TestFramework\TestCase\AbstractController
         $this->assertEquals(Response::STATUS_CODE_200, $this->getResponse()->getStatusCode());
 
         $expectedJson = '{"message":"My First Page"}';
-        $this->assertJsonStringEqualsJsonString($expectedJson, $this->getResponse()->getContent());
+        //$this->assertJsonStringEqualsJsonString($expectedJson, $this->getResponse()->getContent());
+
+        var_dump($this->getResponse()->getContent());
     }
 }
