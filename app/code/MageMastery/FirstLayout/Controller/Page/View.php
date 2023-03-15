@@ -18,7 +18,7 @@ class View extends Action
 
         /** @var Template $block */
         $block = $page->getLayout()->getBlock('magemastery.first.layout.example');
-        $block->setData('custom_parameter', 'Data from the Controller');
+        //$block->setData('custom_parameter', 'Data from the Controller');
 
         return $page;
     }

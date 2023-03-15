@@ -10,11 +10,15 @@ use Magento\Framework\View\Result\PageFactory;
 
 class Index extends Action implements HttpGetActionInterface
 {
-    const ADMIN_RESOURCE = 'Diko_Enterprise::company';
+    public const ADMIN_RESOURCE = 'Diko_Enterprise::company';
 
     /** @var PageFactory */
-    protected $pageFactory;
+    protected PageFactory $pageFactory;
 
+    /**
+     * @param Context $context
+     * @param PageFactory $pageFactory
+     */
     public function __construct(Context $context, PageFactory $pageFactory)
     {
         parent::__construct($context);
