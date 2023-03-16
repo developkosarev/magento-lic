@@ -1,0 +1,740 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:MageSuite_Changelog:etc/changelog.xsd">
+    <module id="Theme_Creativeshop" name="Theme_Creativeshop">
+        <changelog>
+            <tag version="17.0.0" date="2022-01-28">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Next generation sliders, teasers and product tiles</overview>
+                    <description>
+                        This release introduces a refactor for slider-based components,
+                        like image-teasers and products-carousels, as well as the new structure
+                        and architecture for product tile. It gets rid of a Swiper library,
+                        replacing JS-based slider with modern CSS solutions and simplyfing product-tile,
+                        thanks to CSS Grid possibilities, which gives us more flexibility of styling tile per project,
+                        without element's duplication, overwriting or complex layout changes.
+                        Note that these changes drop some of the functionalities of slider elements
+                        and change strucutures of product tiles and teasers, so they need much attention during the udpate.
+                        Chages are spread across many MageSuite modules.
+
+                        More details can be found in:
+                        https://creativestyle.atlassian.net/wiki/spaces/CSHOP/pages/2135359509/Next+generation+Teaser+Slider+and+Product+Tile
+                    </description>
+                </entry>
+            </tag>
+            <tag version="17.1.0" date="2022-03-21">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>In-place Video Teasers and Consent Management component</overview>
+                    <description>
+                        Introduces support for new Content Constructor possibilities - placing a Video inside of teaser-based components
+                        https://creativestyle.atlassian.net/wiki/spaces/MGS/pages/2017525775/2.16.+Video+Teasers
+                    </description>
+                </entry>
+                <entry>
+                    <type>PERFORMANCE</type>
+                    <overview>Breakpoint utility refactor and breakpoint change event introduced</overview>
+                    <description>New "breakpointChange" event on document has been implemented, that can be referenced instead of widndow resize listeners taht affect performance</description>
+                </entry>
+            </tag>
+            <tag version="17.2.0" date="2022-04-03">
+                <entry>
+                    <type>PERFORMANCE</type>
+                    <overview>Serve google fonts locally</overview>
+                </entry>
+            </tag>
+            <tag version="17.3.0" date="2022-04-06">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Improved scroll snap for iOS</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Possibility to add autorotate to sliders on mobile</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Brand carousel configuration moved to view.xml, for more flexible customization</overview>
+                </entry>
+            </tag>
+            <tag version="17.4.0" date="2022-04-19">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add missing deafult scheme to navigation teaser config</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Improve behaviour of search field and offcanvas navigation on mobile</overview>
+                </entry>
+            </tag>
+            <tag version="17.5.0" date="2022-05-05">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Possibility to set custom settings for products carousel in offcanvas minicart</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Resolve JS issues with reviews on PDP component</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add animating wishlist badge for support of AJAX "Add to wishlist"</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Improve slider autorotation - clear autorotate interval before starting new one</overview>
+                </entry>
+                <entry>
+                    <type>SECURITY</type>
+                    <overview>Resolve security vulnerabilities in templates</overview>
+                </entry>
+            </tag>
+            <tag version="17.6.0" date="2022-06-20">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Possibility to set custom settings for products carousel in offcanvas minicart</overview>
+                </entry>
+                <entry>
+                    <type>DEFAULT</type>
+                    <overview>Remove support for carousel with the list view</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Remove Magento Page Builder leftovers on cateory pages entirely</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add support for autorotation in slider - for mobile devices as an option</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Support for MageSuite Instant Purchase feature</overview>
+                </entry>
+            </tag>
+            <tag version="17.6.1" date="2022-07-01">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Eager load posibility for Hero Teaser</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fixed reviews pagination/load more button when user click on review link in buybox</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fixed sorting, that switched back to default after jumping pages with paginaton</overview>
+                </entry>
+            </tag>
+            <tag version="18.0.0" date="2022-12-06">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Support for Magento 2.4.4</overview>
+                    <description>Templates have been aligned with Magento core</description>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Swatches refactor</overview>
+                    <description>Swatches logic was refactored in order to improve performance and fix issues with displaying price modificators. New changes allow projects to easily apply customizations.</description>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add optional styles for file-attachments module</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add styles for add-to-homescreen guide and refactor notification-panel styles</overview>
+                    <description>
+                        Styles and icons for new component - a2hs-guide was added. It replaced pwa-notification comppnent.
+                        Push-notifications component was renamed into notification-panel.
+                        --shipping modifier for notification-panel was replaced with more neutral --slim
+                        Styles for a2hs-guide and notifications-panel are commented - they are optional now.
+                    </description>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add additional, universal class for buybox add to wishlist icon</overview>
+                    <description>
+                        In order to make theme compatible with magesuite-wishlist module
+                        add a class to wishlist icon to allowa ajax add to wishlist badge animation
+                    </description>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add proper image width for autocomplete image</overview>
+                    <description>
+                        New image optimization functionality by default does not add additional white space in order to fit defiened image size.
+                        In order to makeimage optimization faster it is recommended to define real sizes (aspect ratio) for product images.
+                    </description>
+                    <ticket_id>MGS-4641</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add data-product-id to buybox wishlist icon</overview>
+                    <description>
+                        Add data-product-id to buybox wishlist icon in order to add selected class if given product is already added to the wishlist
+                    </description>
+                    <ticket_id>IPET-1422</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix pwa-a2hs-guide styles</overview>
+                    <description>
+                        Fix for: Buttons are overlapping when I added a static block
+                        Fix for: Missing arrow when a static block is added (mobile)
+                    </description>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix translation and remove leftover custom-modal styles</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>PDP Gallery: Improved Cumulative Layout Shift</overview>
+                    <description>
+                        Removed styles that affect browser flow in keeping a space for image that is still loading.
+                        Cleaned up webp-related code, as not supported anymore.
+                    </description>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>improve SEO: Add custom tag support for product details headlines, fix footer and minicart headlines, add proper styles</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>fix checkout agreements visiblity for orders with only payment step (virtual products and gift cards)</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix style of disabled swatches displayed on product tile when Back-In-Stock feature is active</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add missing styles for related products carousels in cart</overview>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Unify "My Addresses" string to get the correct breadcrumbs translation in user area</overview>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix amazon divider for multiple lines</overview>
+                    <ticket_id>NKD-3273</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix button 'show more', which not hide after load last items</overview>
+                    <ticket_id>MGS-4372</ticket_id>
+                </entry>
+                <entry>
+                    <type>DEFAULT</type>
+                    <overview>Bigger cleanup of the whole theme-creativeshop components, entries and folder structure</overview>
+                    <description>Changes are described in breaking_changes_v18 documentation</description>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Implement additional function for getting video configuration so child projects can extend it</overview>
+                    <ticket_id>NKD-3244</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix support for removing item from cart by setting Qty lesser than min value</overview>
+                    <ticket_id>HAAR-2745</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add support for Elasticsuite Instant Search</overview>
+                    <description>
+                        Commit introduces changes to instant search form.mini.phtml template and provides optional components to be used
+                        in projects with Elasticsuite Premium feature - Instant Search
+                    </description>
+                    <ticket_id>MGS-4665</ticket_id>
+                    <doc_reference>elasticsearch_instant_search_integration.md</doc_reference>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Hide redundant bundle options wrapper for simplified bundle product (extended)</overview>
+                    <description>
+                        Hiding bundle options wrapper has been extended to also cover edited products that have been already placed in cart (configure simplified bundle product)
+                    </description>
+                    <ticket_id>KRG-2352</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Allow using lazyload for background images</overview>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Disable ATC btn. on product tile until all necessary scripts to finish the process are loaded</overview>
+                    <ticket_id>HAKA-1650</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add hotspots directly before and after aftersearch navigation</overview>
+                    <description>
+                        Additional hotspots will allow to place additional content.
+                        That can be useful especially when arrangement of toolbar, sorter and filters is different on mobile and desktop layout.
+                    </description>
+                    <ticket_id>RK-65</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>[CART] Error message appears twice</overview>
+                    <ticket_id>NKD-3292</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix wrong number of steps in progress bar in checkout</overview>
+                    <ticket_id>NKD-3351</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Return widget in create method of collapsible mixin</overview>
+                    <description>
+                        In order to fix tabs widget which is based on collapsible widget fix create method in collapsible-ext mixin
+                    </description>
+                    <ticket_id>RK-80</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add missing declarations for aliases</overview>
+                    <ticket_id>MGS-4722</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix imports - naming issues</overview>
+                    <ticket_id>P2G-1994</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix offcanvas hide method to remove old CSS class from body</overview>
+                    <ticket_id>HAAR-3229</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix Daily Deal dynamic labels on tile</overview>
+                    <ticket_id>DOG-1350</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Consider autoplay options in video-player, when triggering by consent status change</overview>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Compatibility with Magento 2.4.5</overview>
+                    <description>
+                        All the overwritten templates have been reviewed and aligned with the newest magento changes.
+                        The following templates were removed due to similarity with original/not used anymore:
+                            - src/Magento_Theme/templates/opengraph/cms.phtml
+                            - src/Magento_Theme/templates/opengraph/category.phtml
+                            - src/Magento_Theme/templates/html/defer.phtml
+                            - src/Magento_Checkout/templates/cart/item/renderer/actions/move_to_wishlist.phtml
+                            - src/Magento_Checkout/web/template/billing-address/details.html (almost the same as original)
+                            - src/Magento_Checkout/web/template/shipping-information/address-renderer/default.html (almost the same as original)
+                    </description>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Prevent offcanvas navigation content from being loaded on desktop devices</overview>
+                    <ticket_id>HAAR-3245</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add advanced tab to pass additional options for teaser based CC components</overview>
+                    <description>
+                        Additional adjustments:
+                        - category image template has been overwritten and enhanced with fetchpriority attribute that can be set via view.xml
+                        Changes are described in breaking_changes_v18 documentation.
+                    </description>
+                    <ticket_id>KRG-2273</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Always show edit cart link in checkout payment step</overview>
+                    <ticket_id>RK-372</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>fix: Add condition in minicart template in order to prevent its break when getCartParam(summary_count) is not available</overview>
+                    <ticket_id>RK-350</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix mobile nav preload for Safari browser</overview>
+                    <ticket_id>HAAR-3300</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Adjust PWA guide styles for desktop</overview>
+                    <ticket_id>MGS-4567</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Do not show error after click on disabled swatch with back-in-stock alert</overview>
+                    <ticket_id>MGS-4747</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>[PDP] Add line break for long descriptions of attachments</overview>
+                    <ticket_id>IPET-1624</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix error invalid argument supplied for foreach() in included-items.phtml</overview>
+                    <ticket_id>P2G-2031</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Refactor checkout next-button logic in order to make it more elastic</overview>
+                    <description>Changes are described in breaking_changes_v18 documentation</description>
+                    <ticket_id>RK-361</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Change user area breadcrumbs translation</overview>
+                    <ticket_id>RK-399</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Change logic for showing/hideing popular badge</overview>
+                    <ticket_id>LEDS-2301</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add DHL packstation next button mixin</overview>
+                    <description>
+                        In odrer to avoid going to the payment step if packstation method is checked
+                        but no packstation is selected add next button validation. Also if packstation is selected
+                        on next button click trigger packstation for submit
+                    </description>
+                    <ticket_id>RK-362</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add possibility to define accordion headline tag. Remove bottom margin, as it can be headline tag now.</overview>
+                    <ticket_id>RK-485</ticket_id>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Introduce Instant Product Finder styles and scripts (for optional, private module)</overview>
+                    <ticket_id>TOYS-245</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.1" date="2022-12-06">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Restore cart summary for tablets (override magento styles)</overview>
+                    <description>HAAR-3335</description>
+                </entry>
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Remove title attribute from action links in cart (edit, remove)</overview>
+                    <description>RK-484</description>
+                </entry>
+            </tag>
+            <tag version="18.0.2" date="2022-12-12">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix 2 columns left layout for tablets (override magento styles)</overview>
+                    <ticket_id>HAAR-3350</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.3" date="2022-12-13">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Remove swatches input validation from product tile</overview>
+                    <ticket_id>LP-1860</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.4" date="2022-12-15">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix checkout modals when not scrollable</overview>
+                    <ticket_id>MGS-4757</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.5" date="2022-12-16">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix refreshing mobile navigation after clear navigation cache</overview>
+                    <ticket_id>IPET-1668</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.7" date="2023-01-03">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add missing plugin company forms styles</overview>
+                    <ticket_id>HAKA-1779</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.8" date="2023-01-03">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add email validation to account email change in UA</overview>
+                    <ticket_id>HAKA-1778</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.9" date="2023-01-04">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Preselected swatch on PDP cause error with validation</overview>
+                    <ticket_id>NKD-3492</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.11" date="2023-01-09">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add config in etc/view.xml that allows to show wysiwyg editor for teaser slogan and/or description in CC configurator</overview>
+                    <description>
+                        Add 'allow_slogan_editor' and 'allow_description_editor' configs in etc/view.xml in MageSuite_ContentConstructor/teaser paths.
+                        Editors are disabled by default. When set to true `Hide/show editor` button is displayed under
+                        slogan and/or description textarea in the admin panel CC configurator for teaser-based components.
+                        If the feature is enabled in a child project change slogan and description wrapper tags to 'div'
+                        and style nested elements (headings etc.).
+
+                        In teaser advanced tab add a switcher to link only CTA button and not the whole slide. If links are placed inside slogan or description
+                        only CTA button should be linked.
+                    </description>
+                    <ticket_id>RK-451</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.12" date="2023-01-10">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Hide swatches and rating error message if swatch  or rating is selected</overview>
+                    <ticket_id>MGS-4812</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.13" date="2023-01-18">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Remove "Go to" tablet link for categories that have url disabled</overview>
+                    <ticket_id>RK-598</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.14" date="2023-01-18">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add top space for Content Constructor on PDP</overview>
+                    <ticket_id>MGS-4792</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.16" date="2023-01-19">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add brand area to grid-template-areas of product tile. Align brand to left.</overview>
+                    <ticket_id>MGS-4784</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add brand area to grid-template-areas of product tile. Align brand to left.</overview>
+                    <ticket_id>MGS-4784</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix brand position on product tile list view</overview>
+                    <ticket_id>MGS-4737</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Show configuration panel for standard bundle products</overview>
+                    <ticket_id>MGS-5041</ticket_id>
+                </entry>
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add missing breadcrumbs in User Area</overview>
+                    <ticket_id>MGS-4514</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.17" date="2023-01-18">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Clear global messages before adding product to the cart</overview>
+                    <description>
+                        In case when search result return single product, there is a redirect to product detail page performed on enter key.
+                        After that the global message is displayed via messages. If product will be added to the cart this message will be cached
+                        and displayed within the offcanvas mini cart along with the next message about product being added to the cart.
+                        Similar issue can be observed when product is added to the wishlist and right after that product is added to the cart.
+                        This fix clears the global messages right before fetching new messages that are going to be displayed within the offcanvas minicart.
+                    </description>
+                    <ticket_id>KRG-2436</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.18" date="2023-01-23">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Enable qty increment button when qty is equal to 1</overview>
+                    <ticket_id>HAAR-3337</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.19" date="2023-01-25">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Link with disabled URL will now be a span</overview>
+                    <ticket_id>RK-606</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.1.0" date="2023-01-31">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Adjust entries order (tabs)</overview>
+                    <description>
+                        Components search-result-switcher and search-result-cms are based on tabs component therefore the order of loading
+                        those assets had to be adjusted to avoid style overrides with important.
+                    </description>
+                    <ticket_id>KRG-2456</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.24" date="2023-02-03">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add delay for input validation while editing</overview>
+                    <description>
+                        Add editing state for input, which is added when a user is typing. For editing state an error is hidden by CSS.
+                        In order to switch off this feature set enableEditingState option to false in a child project
+                        by mixin for Magento_Ui/js/form/element/abstract file.
+                    </description>
+                    <ticket_id>RK-498</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.25" date="2023-02-03">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix price style for bundle items in checkout summary</overview>
+                    <ticket_id>MGS-4798</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.26" date="2023-02-03">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Remove unnecessary space belowe in-store pickup tab in checkout</overview>
+                    <ticket_id>MGS-5013</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.27" date="2023-02-03">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Fix update wishlist layout for simplified and standard bundles</overview>
+                    <ticket_id>MGS-4770</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.28" date="2023-02-06">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Adjust header links styles and header user link markup</overview>
+                    <description>
+                        Add margin top for header link label when it's visible. Moved label outside icon wrapper in account item.
+                    </description>
+                    <ticket_id>ROT-1179</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.29" date="2023-02-08">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Add visibleSlideIntersection config for teaser pagintion</overview>
+                    <description>
+                        visibleSlideIntersection config is a number which indicates at what percentage of
+                        the slides's visibility the pagination observer's callback should be executed
+                        and slide should be considered as in viewport. The default value is 0.5
+                    </description>
+                    <ticket_id>TOYS-228</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.30" date="2023-02-08">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add 'discount' classname to totals in cart</overview>
+                    <ticket_id>IPET-1864</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.31" date="2023-02-09">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Add possibility of adding translations to extended Instant Search</overview>
+                    <description>
+                        Possibility of adding custom strings that will be translated was added, as it is not possible via react component itself.
+                    </description>
+                    <ticket_id>TOYS-574</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.33" date="2023-02-13">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Changed PDP stylesheets order (table moved)</overview>
+                    <description>
+                        Moved table import to base components section so it doesn't override specific styles
+                    </description>
+                    <ticket_id>ROT-1183</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.34" date="2023-02-16">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add optional styles, scripts and proper import in entry for MageSuite_ProductSlideGallery module</overview>
+                    <ticket_id>LP-1904</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.35" date="2023-02-16">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add additional classname for offcanvas button and sorter when category has only 1 product</overview>
+                    <description>
+                        For categories with only 1 product "cs-toolbar__item--hide" classname has been added to offcanvas button and sorter in toolbar.
+                        This will make it possible to hide these elements when needed.
+                    </description>
+                    <ticket_id>IPET-1692</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.36" date="2023-02-21">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Adjust header-user-nav search-icon markup</overview>
+                    <description>
+                        Moved label outside icon wrapper
+                    </description>
+                    <ticket_id>P2G-2135</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.0.37" date="2023-02-24">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add additional 'hotspot' container before toolbar to list template</overview>
+                    <ticket_id>IPET-1692</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.1.0" date="2023-02-22">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Improvements for product slide gallery - add horizontal thumb nav support and reduce cls</overview>
+                    <ticket_id>LP-1904</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.2.0" date="2023-02-27">
+                <entry>
+                    <type>FEATURE</type>
+                    <overview>Add styles for Magesuite_WidgetNotificationModal module</overview>
+                    <ticket_id>TOYS-625</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.2.1" date="2023-03-06">
+                <entry>
+                    <type>FIX</type>
+                    <overview>Initialise tile daily deal features after minicart related products carousel is loaded</overview>
+                    <ticket_id>MGS-4799</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.2.3" date="2023-03-07">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>[User Area] Move related styles from magento _module.less to scss file, to import it only in customer.ts entry</overview>
+                    <ticket_id>MGS-5022</ticket_id>
+                </entry>
+            </tag>
+            <tag version="18.3.0" date="2023-03-07">
+                <entry>
+                    <type>FEAT</type>
+                    <overview>Restore script based lazyload via vanilla-lazyload with custom init.</overview>
+                    <ticket_id>MGS-5019</ticket_id>
+                </entry>
+            </tag>
+        </changelog>
+    </module>
+</config>

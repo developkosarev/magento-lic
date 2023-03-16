@@ -1,0 +1,18 @@
+<!--
+/**
+ * Template overriden to adjust classes
+ * Aligned with Magento 2.4.5 at 09/2022
+ */
+-->
+<!-- ko foreach: getRegion('messages') -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+<!--/ko-->
+<div>
+    <!-- ko if: isFormVisible -->
+    <p class="cs-page-success__subheadline" data-bind="i18n: 'You can track your order status by creating an account.'"></p>
+    <p class="cs-page-success__text"><span data-bind="i18n: 'Email Address'"></span>: <span data-bind="text: getEmailAddress()"></span></p>
+    <a class="action primary" data-bind="attr: { href: getUrl() }">
+        <span data-bind="i18n: 'Create an Account'"></span>
+    </a>
+    <!--/ko-->
+</div>

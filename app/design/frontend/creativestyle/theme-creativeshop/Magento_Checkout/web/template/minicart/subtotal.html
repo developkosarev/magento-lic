@@ -1,0 +1,16 @@
+<!--
+/**
+ * Template overwritten to add classnames
+ * Aligned with Magento 2.4.5 at 09/2022
+ */
+-->
+<div class="cs-minicart__subtotal">
+    <span class="cs-minicart__subtotal-label">
+        <!-- ko i18n: 'Cart Subtotal' --><!-- /ko -->
+    </span>
+    <span class="cs-minicart__subtotal-price">
+            <!-- ko foreach: elems -->
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <!-- /ko -->
+    </span>
+</div>

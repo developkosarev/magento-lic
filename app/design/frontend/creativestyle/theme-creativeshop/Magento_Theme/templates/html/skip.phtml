@@ -1,0 +1,16 @@
+<?php
+/**
+ * Template overridden in order to:
+ * - add class cs-visually-hidden
+ * Aligned with Magento 2.4.5 at 09/2022
+ */
+
+$target = $block->getTarget();
+$label = $block->getLabel();
+?>
+<a class="action skip cs-visually-hidden <?= $block->escapeHtmlAttr($target) ?>"
+   href="#<?= $block->escapeHtmlAttr($target) ?>">
+    <span>
+        <?= $block->escapeHtml($label) ?>
+    </span>
+</a>
