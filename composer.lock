@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b76bcb60893c8e97b421d555807e00fc",
+    "content-hash": "9856feea573fece13904d1c7a973e80a",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -18634,6 +18634,108 @@
                 "source": "https://github.com/wikimedia/less.php/tree/v3.2.1"
             },
             "time": "2023-02-03T06:43:41+00:00"
+        },
+        {
+            "name": "yireo/magento2-admin-react-components",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yireo/Yireo_AdminReactComponents.git",
+                "reference": "399d7d5f94b4247e0100857a7582a0666f5049e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yireo/Yireo_AdminReactComponents/zipball/399d7d5f94b4247e0100857a7582a0666f5049e7",
+                "reference": "399d7d5f94b4247e0100857a7582a0666f5049e7",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^102.0|^103.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Yireo\\AdminReactComponents\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "N/A",
+            "support": {
+                "source": "https://github.com/yireo/Yireo_AdminReactComponents/tree/1.0.5"
+            },
+            "time": "2023-04-19T06:49:04+00:00"
+        },
+        {
+            "name": "yireo/magento2-emailtester2",
+            "version": "1.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yireo/Yireo_EmailTester2.git",
+                "reference": "b043efcb6ba34a25063bf30d27cd120118f4bc14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yireo/Yireo_EmailTester2/zipball/b043efcb6ba34a25063bf30d27cd120118f4bc14",
+                "reference": "b043efcb6ba34a25063bf30d27cd120118f4bc14",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "ext-pcre": "*",
+                "magento/framework": "^101.0.1|^101.1|^102.0|^103.0",
+                "magento/module-backend": "^100.0|^101.0|^102.0",
+                "magento/module-catalog": "^101.0|^102.0|^103.0|^104.0",
+                "magento/module-checkout": "^100.0",
+                "magento/module-config": "^100.0|^101.0",
+                "magento/module-customer": "^100.0|^101.0|^102.0|^103.0",
+                "magento/module-eav": "^100.0|^101.0|^102.0",
+                "magento/module-email": "^100.0|^101.0",
+                "magento/module-payment": "^100.0",
+                "magento/module-quote": "^100.0|^101.0",
+                "magento/module-sales": "^100.0|^101.0|^102.0|^103.0",
+                "magento/module-store": "^100.0|^101.0",
+                "magento/module-ui": "^101.0",
+                "yireo/magento2-admin-react-components": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Yireo\\EmailTester2\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jisse Reitsma (Yireo)",
+                    "email": "jisse@yireo.com"
+                }
+            ],
+            "description": "Preview transactional emails and test send them in your backend",
+            "homepage": "https://www.yireo.com/software/magento-extensions/emailtester2",
+            "keywords": [
+                "composer-installer",
+                "magento"
+            ],
+            "support": {
+                "issues": "https://github.com/yireo/Yireo_EmailTester2/issues",
+                "source": "https://github.com/yireo/Yireo_EmailTester2/tree/1.7.2"
+            },
+            "time": "2023-04-19T06:56:41+00:00"
         }
     ],
     "packages-dev": [
