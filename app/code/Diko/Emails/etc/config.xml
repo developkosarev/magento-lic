@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <newsletter>
+            <subscription>
+                <diko_success_email_identity>general</diko_success_email_identity>
+                <diko_success_email_template>diko_newsletter_subscription_success_email_template</diko_success_email_template>
+            </subscription>
+        </newsletter>
+    </default>
+</config>
