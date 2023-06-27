@@ -2,6 +2,25 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
+    <type name="Diko\VueSpa\Service\OptionsDefault">
+        <arguments>
+            <argument name="websiteId" xsi:type="number">3</argument>
+            <argument name="options" xsi:type="array">
+                <item name="angular" xsi:type="string">Angular</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Diko\VueSpa\Service\OptionsJQuery" type="Diko\VueSpa\Service\OptionsDefault">
+        <arguments>
+            <argument name="websiteId" xsi:type="number">4</argument>
+            <argument name="options" xsi:type="array">
+                <item name="angular" xsi:type="string">JQuery</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+
     <type name="Diko\VueSpa\Service\OptionsVue" />
     <type name="Diko\VueSpa\Service\OptionsReact" />
 
@@ -10,6 +29,7 @@
             <argument name="options" xsi:type="array">
                 <item name="vue" xsi:type="object">Diko\VueSpa\Service\OptionsVue</item>
                 <item name="react" xsi:type="object">Diko\VueSpa\Service\OptionsReact</item>
+                <item name="jquery" xsi:type="object">Diko\VueSpa\Service\OptionsJQuery</item>
             </argument>
         </arguments>
     </type>

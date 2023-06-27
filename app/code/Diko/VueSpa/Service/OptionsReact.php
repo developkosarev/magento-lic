@@ -5,6 +5,11 @@ namespace Diko\VueSpa\Service;
 
 class OptionsReact implements OptionsInterface
 {
+    public function getWebsiteId(): int
+    {
+        return 2;
+    }
+
     public function getOptions(): iterable
     {
         yield ['code' => 'react17', 'name' => 'react17'];
