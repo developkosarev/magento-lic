@@ -4,7 +4,9 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main">
-            <block name="vuespa.spa.index" template="Diko_VueSpa::spa/spa.phtml">
+            <block name="vuespa.spa.index"
+                   template="Diko_VueSpa::spa/spa.phtml"
+                   cacheable="false">
             </block>
         </referenceContainer>
     </body>

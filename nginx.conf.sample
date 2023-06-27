@@ -136,6 +136,10 @@ location /static/ {
     add_header X-Frame-Options "SAMEORIGIN";
 }
 
+location = /vuespa/static/app-1.js {
+    proxy_pass http://minio.local:81/vue-lic/app-1.js;
+}
+
 location /media/ {
 
 ## The following section allows to offload image resizing from Magento instance to the Nginx.
