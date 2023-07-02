@@ -10,7 +10,7 @@ use Magento\Framework\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 
 //https://magento-lic.local/vuespa/spa/index
-class Index implements HttpGetActionInterface
+class Index implements HttpGetActionInterface, \Magento\Csp\Api\CspAwareActionInterface
 {
     private PageFactory $pageFactory;
     private OptionsFactoryInterface $optionsFactory;
@@ -24,11 +24,29 @@ class Index implements HttpGetActionInterface
     public function execute(): Page
     {
         $option = $this->optionsFactory->create(1);
-        echo "<pre>";
-        var_dump($this->optionsFactory);
+        //echo "<pre>";
+        //var_dump($this->optionsFactory);
         //var_dump($option);
-        echo "</pre>";
+        //echo "</pre>";
+
+        //echo "<pre>";
+        //var_dump($_REQUEST);
+        //var_dump($_SERVER);
+        //var_dump($GLOBALS);
+        //echo "</pre>";
 
         return $this->pageFactory->create();
+    }
+
+    public function modifyCsp(array $appliedPolicies): array
+    {
+        $appliedPolicies[] = new \Magento\Csp\Model\Policy\FetchPolicy(
+            'form-action',
+            false,
+            ['http://minio.local:81'],
+            ['http']
+        );
+
+        return $appliedPolicies;
     }
 }
