@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+    <type name="customer_data_device" translate="label,description" instance="Diko\DeviceSync\Model\Cache\Type\CustomerData">
+        <label>Diko Section Data Ids</label>
+        <description>Diko section data ids cache</description>
+    </type>
+</config>
