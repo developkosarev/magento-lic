@@ -75,4 +75,4 @@ atlassian*
 
 
 /app/code/Diko/Webpack/node_modules
-/app/code/Diko/Webpack/distr
+/app/code/Diko/Webpack/dist/*
