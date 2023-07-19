@@ -72,3 +72,7 @@ atlassian*
 /generated/*
 !/generated/.htaccess
 .DS_Store
+
+
+/app/code/Diko/Webpack/node_modules
+/app/code/Diko/Webpack/distr
