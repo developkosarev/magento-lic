@@ -1,5 +1,14 @@
 <?php /** @var \Magento\Customer\Block\Adminhtml\Edit\Tab\Newsletter $block */ ?>
-<div id='diko-newsletter' class="entry-edit">
+<div id="diko-newsletter" class="entry-edit"
+     data-mage-init='{ "Diko_Newsletter/js/vue-test": {} }'>
 <?= $block->getForm()->getHtml() ?>
 </div>
 <?= $block->getChildHtml('grid') ?>
+
+<script type="text/x-magento-init">
+{
+    "#diko-newsletter": {
+        "Diko_Newsletter/js/vue-test": {}
+    }
+}
+</script>

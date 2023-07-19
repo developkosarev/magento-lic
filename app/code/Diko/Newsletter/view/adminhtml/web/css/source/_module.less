@@ -2,4 +2,18 @@
     fieldset {
         background-color: red;
     }
+
+    .admin__field-label {
+        &:before {
+            opacity: 1;
+            font-size: 26px;
+            content: '-';
+        }
+    }
+
+    .admin__fieldset {
+        > .admin__field {
+            margin-bottom: 1rem;
+        }
+    }
 }
