@@ -1,16 +1,16 @@
 const path = require('path');
 
+const OUTPUT_PATH = 'view/frontend/web/js/build'
+
 let conf = {
-	//entry: './src/js/index.js',
 	entry: {
 		main: './src/js/index.js',
 		mainNew: './src/js/indexNew.js'
 	  },
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		//filename: 'main.js',
+		path: path.resolve(__dirname, OUTPUT_PATH),
 		filename: '[name].bundle.js',
-		publicPath: 'dist/'
+		publicPath: 'view/frontend/web/js/build/'
 	}
 }
 
