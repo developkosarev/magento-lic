@@ -49,12 +49,14 @@ let conf = {
             }
         ]
     },
+    //https://kumardeepak.xyz/blog/configure-webpack-5-devserver-with-a-php-website-hosted-on-localhost/
     devServer: {
         devMiddleware: {
-            publicPath: path.join(__dirname, 'build'),
+            //publicPath: path.join(__dirname, 'build'),
             writeToDisk: true,
         },
         hot: false,
+        //https: true,
         port: '8989',
         host: 'magento-lic.local',
         allowedHosts: 'auto',
@@ -65,13 +67,7 @@ let conf = {
         },
         static: false,
         watchFiles: ['src/**/*.*', 'app/**/*.*'],
-    },
-    //devServer: {
-    //    static: './view',
-    //    client: {
-    //        overlay: true,
-    //    }
-    //},
+    }
 }
 
 module.exports = (env, options) => {

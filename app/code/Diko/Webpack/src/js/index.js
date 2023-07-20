@@ -4,7 +4,7 @@
 import some from './some.js'
 
 console.log('11111');
-console.log('22222+1');
+console.log('22222+4');
 console.log(some.merge({a:1}, {b:2}));
 
 function test1()
