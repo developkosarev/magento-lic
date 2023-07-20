@@ -12,6 +12,9 @@ const BABEL_TARGETS = 'defaults'
 //const BABEL_TARGETS = '> 0.25%, not dead'
 
 let conf = {
+    //https://webpack.js.org/api/cli/
+    //npx webpack --config-name first --config-name second
+    //name: 'first',
 	entry: {
 		//main: './src/js/index.js',
 		//mainNew: './src/js/indexNew.js',
@@ -60,11 +63,11 @@ let conf = {
         port: '8989',
         host: 'magento-lic.local',
         allowedHosts: 'auto',
-        proxy: {
-            '/': {
-                target: `https://localhost/info.php`,
-            },
-        },
+        //proxy: {
+        //    '/': {
+        //        target: `https://magento-lic.local`,
+        //    },
+        //},
         static: false,
         watchFiles: ['src/**/*.*', 'app/**/*.*'],
     }
