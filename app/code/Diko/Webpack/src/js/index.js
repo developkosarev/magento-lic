@@ -1,14 +1,14 @@
-import {sum} from './some.js'
-console.log(sum(1,2,3,4,5,6,7,9));
+//import {sum} from './some.js'
+//console.log(sum(1,2,3,4,5,6,7,9));
 
 import some from './some.js'
 
 console.log('11111');
-console.log('22222');
+console.log('22222+1');
 console.log(some.merge({a:1}, {b:2}));
 
 function test1()
-{	
+{
 	console.log(1245);
 }
 
@@ -24,5 +24,5 @@ var test3 = function()
 
 window.addEventListener("load", function() {
 	test3();
-	console.log('load')
+	console.log('load2')
 });
