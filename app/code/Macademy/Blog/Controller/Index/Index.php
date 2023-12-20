@@ -6,6 +6,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\Forward;
 use Magento\Framework\Controller\Result\ForwardFactory;
 
+https://magento-lic.local/blog
 class Index implements HttpGetActionInterface
 {
     public function __construct(

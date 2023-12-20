@@ -6,6 +6,7 @@
         <arguments>
             <argument name="commands" xsi:type="array">
                 <item name="firstpage_firstcommand" xsi:type="object">MageMastery\FirstPage\Command\FirstCommand</item>
+                <item name="firstpage_clonecommand" xsi:type="object">MageMastery\FirstPage\Command\CloneCommand</item>
             </argument>
         </arguments>
     </type>
