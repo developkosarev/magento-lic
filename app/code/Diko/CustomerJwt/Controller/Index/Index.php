@@ -13,6 +13,7 @@ use Magento\Integration\Api\UserTokenIssuerInterface;
 use Magento\Integration\Model\CustomUserContext;
 use Magento\Integration\Model\UserToken\UserTokenParametersFactory;
 
+//https://medium.com/swlh/deploying-docker-compose-applications-with-ansible-and-github-actions-7f1740392507
 //https://magento-lic.local/customerjwt/index/index
 class Index implements HttpGetActionInterface
 {

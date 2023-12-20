@@ -16,4 +16,9 @@ $postVm = $block->getData('post_vm');
         <?php endforeach ?>
     </ul>
     <p><?= __('Post count: %1', $postVm->getCount()) ?></p>
+    <pre>
+        <? var_dump(1) ?>
+        <? $postVm->getCount() ?>
+        <? gettype($postVm) ?>
+    </pre>
 </div>

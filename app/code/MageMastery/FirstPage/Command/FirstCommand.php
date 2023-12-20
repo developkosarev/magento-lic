@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace MageMastery\FirstPage\Command;
 
+use Magento\Catalog\Api\Data\ProductInterface;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -97,5 +98,11 @@ class FirstCommand extends Command
         $output->writeln("<info>Root category id is `{$parentId}`</info>");
 
         return $exitCode;
+    }
+
+    protected function cloneProduct(): ?ProductInterface
+    {
+
+        return null;
     }
 }
