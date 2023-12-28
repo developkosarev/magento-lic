@@ -12,13 +12,15 @@
             "laminas/laminas-dependency-plugin": true,
             "magento/*": true,
             "magento/magento-composer-installer": true,
-            "magento/inventory-composer-installer": true
+            "magento/inventory-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "preferred-install": "dist",
         "sort-packages": true
     },
     "version": "2.4.4",
     "require": {
+        "cweagans/composer-patches": "^1.7",
         "magento/composer-dependency-version-audit-plugin": "~0.1",
         "magento/composer-root-update-plugin": "~2.0",
         "magento/product-community-edition": "2.4.5",
@@ -172,6 +174,11 @@
         }
     ],
     "extra": {
-        "magento-force": "override"
+        "magento-force": "override",
+        "patches" : {
+            "magento/framework": {
+                "DI-1 Add XML atribute": "patches/composer/DI-1.patch"
+            }
+        }
     }
 }
