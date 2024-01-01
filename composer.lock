@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9ceac1d960cf53521568fffba27c5048",
+    "content-hash": "118b9df1680fe75f2a3e35a5af1a10a1",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -1282,6 +1282,41 @@
                 }
             ],
             "time": "2022-02-24T20:20:32+00:00"
+        },
+        {
+            "name": "creativestyle/magesuite-magepack",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/magesuite/magepack-magento.git",
+                "reference": "a84002568935d46feb47331d6c6cd3b62d877079"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/magesuite/magepack-magento/zipball/a84002568935d46feb47331d6c6cd3b62d877079",
+                "reference": "a84002568935d46feb47331d6c6cd3b62d877079",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "MageSuite\\Magepack\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Module responsible for handling advanced JavaScript bundling.",
+            "homepage": "https://creativestyle.de",
+            "support": {
+                "issues": "https://github.com/magesuite/magepack-magento/issues",
+                "source": "https://github.com/magesuite/magepack-magento/tree/v1.1.4"
+            },
+            "time": "2020-10-19T13:11:34+00:00"
         },
         {
             "name": "cweagans/composer-patches",
