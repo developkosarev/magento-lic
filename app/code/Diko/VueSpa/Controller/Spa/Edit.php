@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Diko\MobileMenu\Controller\Index;
+namespace Diko\VueSpa\Controller\Spa;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\Page;
 use Magento\Framework\View\Result\PageFactory;
 
-//https://magento-lic.local/mobilemenu/index/index
-class Index implements HttpGetActionInterface
+//https://magento-lic.local/vuespa/spa/edit
+class Edit implements HttpGetActionInterface
 {
     private PageFactory $pageFactory;
 

@@ -2,8 +2,8 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
     <router id="standard">
-        <route id="mobile_menu" frontName="mobilemenu">
-            <module name="Diko_MobileMenu" />
+        <route id="navigation" frontName="navigation">
+            <module name="Diko_navigation" />
         </route>
     </router>
 </config>

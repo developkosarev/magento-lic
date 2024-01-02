@@ -4,8 +4,8 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="main">
-            <block name="mobile_menu.index.index"
-                   template="Diko_MobileMenu::index/menu.phtml">
+            <block name="vuespa.spa.index"
+                   template="Diko_VueSpa::spa/spa-v2.phtml">
             </block>
         </referenceContainer>
     </body>
