@@ -4,6 +4,8 @@
     <body>
         <move element="page.messages" destination="footer-container" before="-"/>
 
+        <!--
         <referenceContainer name="before.body.end" display="false" />
+        -->
     </body>
 </page>
