@@ -2,11 +2,11 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
 
     <table name="diko_company" resource="default" engine="innodb" comment="Company table">
-        <column name="id" xsi:type="int" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
-        <column name="title" xsi:type="varchar" nullable="false" length="255" comment="Title"/>
-        <column name="prefix" xsi:type="varchar" nullable="false" length="2" comment="Prefix"/>
-        <column name="phone" xsi:type="varchar" nullable="false" length="20" comment="Phone"/>
-        <column name="address" xsi:type="varchar" nullable="false" length="255" comment="Address"/>
+        <column name="id"         xsi:type="int"       padding="10" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column name="title"      xsi:type="varchar"   nullable="false" length="255" comment="Title"/>
+        <column name="prefix"     xsi:type="varchar"   nullable="false" length="2" comment="Prefix"/>
+        <column name="phone"      xsi:type="varchar"   nullable="false" length="20" comment="Phone"/>
+        <column name="address"    xsi:type="varchar"   nullable="false" length="255" comment="Address"/>
         <column name="created_at" xsi:type="timestamp" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
         <column name="updated_at" xsi:type="timestamp" on_update="true" nullable="false" default="CURRENT_TIMESTAMP" comment="Updated At"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">

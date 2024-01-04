@@ -10,7 +10,8 @@
     <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
         <arguments>
             <argument name="collections" xsi:type="array">
-                <item name="diko_enterprise_company_listing_data_source" xsi:type="string">Diko\Enterprise\Model\ResourceModel\Company\Grid\Collection</item>
+                <item name="diko_enterprise_company_listing_data_source"
+                      xsi:type="string">Diko\Enterprise\Model\ResourceModel\Company\Grid\Collection</item>
             </argument>
         </arguments>
     </type>
