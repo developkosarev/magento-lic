@@ -7,6 +7,9 @@
             <block name="navigation.spa.index"
                    template="Diko_Navigation::spa/index.phtml">
             </block>
+            <block class="Diko\Navigation\Block\Esi"
+                   name="navigation.spa.index_esi_block"
+                   template="Diko_Navigation::spa/esi.phtml" />
         </referenceContainer>
     </body>
 </page>
