@@ -6,6 +6,7 @@
             "prefix": true,
             "phone": true,
             "address": true,
+            "id_extra": true,
             "created_at": true,
             "updated_at": true
         },

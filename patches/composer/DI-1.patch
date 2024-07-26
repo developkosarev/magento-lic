@@ -1,0 +1,12 @@
+diff --git a/vendor/magento/framework/View/Layout/etc/head.xsd b/vendor/magento/framework/View/Layout/etc/head.xsd
+index 51acc57..cc5e173 100644
+--- a/vendor/magento/framework/View/Layout/etc/head.xsd
++++ b/vendor/magento/framework/View/Layout/etc/head.xsd
+@@ -13,6 +13,7 @@
+         <xs:attribute name="charset" type="xs:string"/>
+         <xs:attribute name="hreflang" type="xs:string"/>
+         <xs:attribute name="media" type="xs:string"/>
++        <xs:attribute name="onload" type="xs:string"/>
+         <xs:attribute name="rel" type="xs:string"/>
+         <xs:attribute name="rev" type="xs:string"/>
+         <xs:attribute name="sizes" type="xs:string"/>

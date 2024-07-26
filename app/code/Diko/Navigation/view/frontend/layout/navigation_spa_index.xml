@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<page layout="1column"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main">
+            <block name="navigation.spa.index"
+                   template="Diko_Navigation::spa/index.phtml" ttl="3600">
+            </block>
+            <block class="Diko\Navigation\Block\Esi"
+                   name="navigation.spa.index_esi_block"
+                   template="Diko_Navigation::spa/esi.phtml" />
+        </referenceContainer>
+    </body>
+</page>

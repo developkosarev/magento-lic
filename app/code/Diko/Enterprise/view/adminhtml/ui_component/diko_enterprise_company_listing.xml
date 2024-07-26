@@ -83,6 +83,11 @@
                 <label translate="true">Address</label>
             </settings>
         </column>
+        <column name="id_extra">
+            <settings>
+                <label translate="true">Id extra</label>
+            </settings>
+        </column>
         <column name="created_at">
             <settings>
                 <label translate="true">Created at</label>

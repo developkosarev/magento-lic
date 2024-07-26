@@ -51,6 +51,8 @@
             </settings>
         </field>
     </fieldset>
+
+    <!-- 5 -->
     <fieldset name="content" sortOrder="10">
         <settings>
             <collapsible>true</collapsible>
@@ -77,6 +79,13 @@
                 </validation>
             </settings>
         </field>
+
+        <field name="id_extra" formElement="input">
+            <settings>
+                <label translate="true">Id extra</label>
+            </settings>
+        </field>
+
         <field name="type" formElement="select">
             <settings>
                 <!-- <dataType>text</dataType> -->
