@@ -5,7 +5,7 @@
     <body>
         <referenceContainer name="main">
             <block name="navigation.spa.index"
-                   template="Diko_Navigation::spa/index.phtml">
+                   template="Diko_Navigation::spa/index.phtml" ttl="3600">
             </block>
             <block class="Diko\Navigation\Block\Esi"
                    name="navigation.spa.index_esi_block"

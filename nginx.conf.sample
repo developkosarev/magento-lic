@@ -215,7 +215,7 @@ location ~ ^/(index|get|static|errors/report|errors/404|errors/503|health_check)
     fastcgi_buffer_size 32k;
 	
     set $MAGE_RUN_TYPE store;
-    set $MAGE_RUN_CODE de;
+    #set $MAGE_RUN_CODE beer_de;
 
     fastcgi_param MAGE_RUN_TYPE $MAGE_RUN_TYPE;
     fastcgi_param MAGE_RUN_CODE $MAGE_RUN_CODE;
