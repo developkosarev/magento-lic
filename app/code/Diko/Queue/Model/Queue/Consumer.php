@@ -3,20 +3,25 @@ declare(strict_types=1);
 
 namespace Diko\Queue\Model\Queue;
 
+use Psr\Log\LoggerInterface;
+
 class Consumer
 {
-    /** @var \Psr\Log\LoggerInterface  */
-    protected $_logger;
+    private LoggerInterface $logger;
 
-    public function process($orders)
+    public function __construct(LoggerInterface $logger)
     {
-        //try{
-        //    //function execute handles saving order object to table
-        //    $this->execute($orders);
-
-        //}catch (\Exception $e){
-        //    //logic to catch and log errors
-        //    $this->_logger->critical($e->getMessage());
-        //}
+        $this->logger = $logger;
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function process(string $message): void
+    {
+        echo 'Message received: ' . $message . PHP_EOL;
+
+        $this->logger->info($message);
+    }
+
 }
