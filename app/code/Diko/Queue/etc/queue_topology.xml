@@ -3,7 +3,12 @@
     <exchange name="magento">
         <binding id="diko.queue.reviews" topic="diko.queue.reviews" destination="diko.queue.reviews"/>
     </exchange>
-    <exchange name="magento-symfony">
+    <!--
+    <exchange name="magento">
+        <binding id="diko.queue.symfony" topic="diko.queue.symfony" destination="diko.queue.symfony"/>
+    </exchange>
+    -->
+    <exchange name="magento-symfony" type="topic" connection="amqp">
         <binding id="diko.queue.symfony" topic="diko.queue.symfony" destination="diko.queue.symfony"/>
     </exchange>
 </config>
