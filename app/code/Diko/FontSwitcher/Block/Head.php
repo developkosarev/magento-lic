@@ -41,5 +41,10 @@ class Head extends Template
             'js',
             $attributes
         );
+        $this->pageConfig->addPageAsset(
+            "https://www.test.com/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+            $attributes,
+            'font'
+        );
     }
 }
