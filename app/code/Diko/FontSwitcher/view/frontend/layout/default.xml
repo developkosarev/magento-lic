@@ -5,4 +5,13 @@
         <block class="Magento\Framework\View\Element\Template" name="font_switcher" template="Diko_FontSwitcher::font.phtml" />
         -->
     </head>
+
+    <body>
+        <referenceBlock name="head.additional">
+            <!--
+            <block class="Magento\Framework\View\Element\Template" name="font_switcher" template="Diko_FontSwitcher::font.phtml" />
+            -->
+            <block class="Diko\FontSwitcher\Block\Head" name="test_scripts_add" />
+        </referenceBlock>
+    </body>
 </page>
