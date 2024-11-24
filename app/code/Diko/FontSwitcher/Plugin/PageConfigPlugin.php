@@ -8,9 +8,13 @@ class PageConfigPlugin
 {
     private const USE_CDN = true; // Установите false для локальных шрифтов
 
-    public function beforeAddRemotePageAsset(Config $subject, $url, $type = null, $properties = [])
+    public function beforeAddPageAsset(Config $subject, $url, $type = null, $properties = [])
     {
         if (self::USE_CDN) {
+            //if (stripos($url, 'fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2') > 0) {
+            //    $url = 'https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
+            //}
+
             // Заменяем локальный путь на CDN
             //$url = str_replace(
             //    'fonts/JosefinSans/',
@@ -21,13 +25,9 @@ class PageConfigPlugin
         return [$url, $type, $properties];
     }
 
-    public function beforeAddPageAsset(Config $subject, $url, $type = null, $properties = [])
+    public function beforeAddRemotePageAsset(Config $subject, $url, $type = null, $properties = [])
     {
         if (self::USE_CDN) {
-            //if (stripos($url, 'fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2') > 0) {
-            //    $url = 'https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
-            //}
-
             // Заменяем локальный путь на CDN
             //$url = str_replace(
             //    'fonts/JosefinSans/',
