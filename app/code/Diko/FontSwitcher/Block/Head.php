@@ -35,17 +35,17 @@ class Head extends Template
     public function manageScripts()
     {
         // additional attributes goes here
-        $attributes = [];
-        $this->pageConfig->addRemotePageAsset(
-            "https://www.test.com/js?client-id=xyz",
-            'js',
-            $attributes
-        );
-        $this->pageConfig->addRemotePageAsset(
-            "https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
-            'woff2',
-            $attributes
-        );
+        //$attributes = [];
+        //$this->pageConfig->addRemotePageAsset(
+        //    "https://www.test.com/js?client-id=xyz",
+        //    'js',
+        //    $attributes
+        //);
+        //$this->pageConfig->addRemotePageAsset(
+        //    "https://static-v1.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+        //    'woff2',
+        //    $attributes
+        //);
         //$this->pageConfig->addRemotePageAsset(
         //    "https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
         //    'font',

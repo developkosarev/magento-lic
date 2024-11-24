@@ -2,9 +2,10 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
         <!-- Preload fonts -->
-        <!--
-        <font src="fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2" type="font/woff2" as="font"/>
-        -->
-        <font src="https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2" src_type="url" type="font/woff2" as="font"/>
+        <font src="fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100-v1.woff2" type="font/woff2" as="font" />
+        <font src="https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2"
+              src_type="url"
+              as="font"
+              rel="preload" />
     </head>
 </page>
