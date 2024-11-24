@@ -41,10 +41,20 @@ class Head extends Template
             'js',
             $attributes
         );
-        $this->pageConfig->addPageAsset(
-            "https://www.test.com/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
-            $attributes,
-            'font'
+        $this->pageConfig->addRemotePageAsset(
+            "https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+            'woff2',
+            $attributes
         );
+        //$this->pageConfig->addRemotePageAsset(
+        //    "https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+        //    'font',
+        //    ['rel' => 'preload', 'as' =>'font', 'crossorigin' => 'anonymous']
+        //);
+        //$this->pageConfig->addPageAsset(
+        //    "https://www.test.com/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+        //    $attributes,
+        //    'font'
+        //);
     }
 }
