@@ -12,7 +12,7 @@ class PageConfigPlugin
     {
         if (self::USE_CDN) {
             //if (stripos($url, 'fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2') > 0) {
-            //    $url = 'https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
+            //    $url = 'https://static.xxx.com/static/version1/theme-xxx/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
             //}
 
             // Заменяем локальный путь на CDN

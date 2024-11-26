@@ -42,12 +42,12 @@ class Head extends Template
         //    $attributes
         //);
         //$this->pageConfig->addRemotePageAsset(
-        //    "https://static-v1.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+        //    "https://static-v1.xxx.com/static/version1/theme-xxx/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
         //    'woff2',
         //    $attributes
         //);
         //$this->pageConfig->addRemotePageAsset(
-        //    "https://static.yoshien.com/static/version1/theme-yoshien/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
+        //    "https://static.xxx.com/static/version1/theme-xxx/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2",
         //    'font',
         //    ['rel' => 'preload', 'as' =>'font', 'crossorigin' => 'anonymous']
         //);
