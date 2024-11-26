@@ -1,0 +1,13 @@
+<?php
+$use_cdn = $this->helper(\Magento\Framework\App\Helper\AbstractHelper::class)->getUseCdn(); ?>
+
+<?php if ($use_cdn): ?>
+    <!-- Load fonts from CDN -->
+    <link rel="stylesheet" href="https://cdn.example.com/fonts/josefin-sans.css" />
+<?php else: ?>
+    <!-- Preload local fonts -->
+    <link rel="preload"
+          href="<?php echo $block->getViewFileUrl('Diko_FontSwitcher::fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2'); ?>"
+          as="font" type="font/woff2"
+          crossorigin="anonymous">
+<?php endif; ?>
