@@ -9,6 +9,7 @@ use Magento\Framework\Console\Cli;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
+use Symfony\Component\Console\Input\InputArgument;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Bundle\Model\ResourceModel\Selection;
@@ -28,6 +29,7 @@ class CacheProductsCommand extends Command
     protected function configure(): void
     {
         $this->setName('diko:cache:products')
+            ->addArgument('name', InputArgument::OPTIONAL, 'Who do you want to do (populate, change)?')
             ->setDescription('Caches product children IDs using DIKO_PRODUCTS tag.');
 
         parent::configure();
@@ -39,6 +41,18 @@ class CacheProductsCommand extends Command
         $productCollection->addAttributeToSelect('entity_id');
         $stores = $this->storeManager->getStores();
 
+        $change = $input->getArgument('name');
+        if ($change) {
+            $cacheKey = ProductAttr::TYPE_IDENTIFIER . "_1_1";
+
+            $products = 1;
+
+            $this->cache->save(json_encode($products), $cacheKey, [ProductAttr::CACHE_TAG]);
+
+            $output->writeln('<info>Cache 1 updated successfully.</info>');
+            return Cli::RETURN_SUCCESS;
+        }
+
         foreach ($productCollection as $product) {
             $productId = $product->getId();
 
@@ -47,7 +61,9 @@ class CacheProductsCommand extends Command
                 $childrenIds = $this->selectionResource->getChildrenIds($productId);
                 $cacheKey = ProductAttr::TYPE_IDENTIFIER . "_{$productId}_{$storeId}";
 
-                $this->cache->save(json_encode($childrenIds), $cacheKey, [ProductAttr::CACHE_TAG]);
+                $products['childrenIds'] = $childrenIds;
+
+                $this->cache->save(json_encode($products), $cacheKey, [ProductAttr::CACHE_TAG]);
 
                 $output->writeln("Cached product ID: {$productId} for store ID: {$storeId}");
             }
