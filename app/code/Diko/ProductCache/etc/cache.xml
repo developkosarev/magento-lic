@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cache/etc/cache.xsd">
+    <type name="diko_product_cache" translate="label,description" instance="Diko\ProductCache\Model\Cache\Type\ProductAttr">
+        <label>Diko Product cache Ids</label>
+        <description>Diko product ids cache</description>
+    </type>
+</config>
