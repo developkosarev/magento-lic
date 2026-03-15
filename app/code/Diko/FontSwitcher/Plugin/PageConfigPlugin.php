@@ -8,21 +8,21 @@ class PageConfigPlugin
 {
     private const USE_CDN = true; // Установите false для локальных шрифтов
 
-    public function beforeAddPageAsset(Config $subject, $url, $type = null, $properties = [])
+    public function beforeAddPageAsset(Config $subject, $file, array $properties = [], $name = null)
     {
         if (self::USE_CDN) {
-            //if (stripos($url, 'fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2') > 0) {
-            //    $url = 'https://static.xxx.com/static/version1/theme-xxx/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
+            //if (stripos($file, 'fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2') > 0) {
+            //    $file = 'https://static.xxx.com/static/version1/theme-xxx/fonts/JosefinSans/josefin-sans-v23-latin-ext_latin-100.woff2';
             //}
 
             // Заменяем локальный путь на CDN
-            //$url = str_replace(
+            //$file = str_replace(
             //    'fonts/JosefinSans/',
             //    'https://cdn.example.com/fonts/JosefinSans/',
-            //    $url
+            //    $file
             //);
         }
-        return [$url, $type, $properties];
+        return [$file, $properties, $name];
     }
 
     public function beforeAddRemotePageAsset(Config $subject, $url, $type = null, $properties = [])
